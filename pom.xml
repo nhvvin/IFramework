@@ -10,7 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <selenium.version>3.0.1</selenium.version>
+        <selenium.version>3.3.1</selenium.version>
         <overwrite.binaries>false</overwrite.binaries>
         <browser>chrome</browser>
         <threads>1</threads>
@@ -100,6 +100,16 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.5.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
     </dependencies>
     <!--<build>-->
     <!--<directory>${project.basedir}/target</directory>-->
@@ -121,7 +131,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.6.1</version>
+                        <version>3.7.0</version>
                         <configuration>
                             <source>1.8</source>
                             <target>1.8</target>
@@ -181,6 +191,9 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>3.0.2</version>
+                        <configuration>
+                            <outputDirectory>${basedir}/test-out</outputDirectory>
+                        </configuration>
                         <executions>
                             <execution>
                                 <goals>

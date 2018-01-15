@@ -22,7 +22,7 @@ public class uitesting {
     PageFactory.GoogleHome().Search("This is testing");
     // IFrameworkAutomation.waitForControl(GoogleHomeEntity.Search);
     Thread.sleep(5000);
-    String txtSearch = IFrameworkAutomation.getText(GoogleHomeEntity.Search);
+    String txtSearch = IFrameworkAutomation.getAttribute(GoogleHomeEntity.Search, "value");
     IFrameworkAssert.verifyEquals(txtSearch, "This is testing");
   }
 
