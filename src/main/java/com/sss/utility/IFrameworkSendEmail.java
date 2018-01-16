@@ -13,7 +13,7 @@ public class IFrameworkSendEmail {
 
   public void SendEmail(String htmlContain) throws Exception {
     // Recipient's email ID needs to be mentioned.
-    String to = "hoangviet@siliconstraits.com";
+    String to = "hoangviet@msv-tech.vn";
 
     // Sender's email ID needs to be mentioned
     String from = "robot.qa.siliconstraits@gmail.com";
@@ -74,7 +74,7 @@ public class IFrameworkSendEmail {
     String htmlFolder = iDirectory.getLatestDirectory(htmlFileLocation);
     String htmlContain = iDirectory.readFile(htmlFolder + "emailable-report.html", StandardCharsets.UTF_8);
     // Recipient's email ID needs to be mentioned.
-    String to = "hoangviet@siliconstraits.com";
+    String to = "hoangviet@msv-tech.vn";
 
     // Sender's email ID needs to be mentioned
     String from = "robot.qa.siliconstraits@gmail.com";

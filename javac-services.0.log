@@ -1,25 +1,25 @@
 INFO	?	main	2017-01-19T06:56:51.411Z	org.javacs.Main#connectToNode	Connected to parent using socket on port 55282
-INFO	?	main	2017-01-19T06:56:51.602Z	org.javacs.JavaLanguageServer#doLint	Lint [/Users/vin/Projects/711-Automation/src/test/java/Interfaces/sss/hq/HQFrontEndMainPage.java]
+INFO	?	main	2017-01-19T06:56:51.602Z	org.javacs.JavaLanguageServer#doLint	Lint [/Users/vin/Projects/711-Automation/src/test/java/interfaces/sss/hq/HQFrontEndMainPage.java]
 INFO	?	main	2017-01-19T06:56:51.625Z	org.javacs.JavaLanguageServer#buildClassPath	Emit classpath to /var/folders/qr/qmjdx98s0zq9c3f4lqwqqn080000gn/T/classpath8530627005138903520.txt
 INFO	?	main	2017-01-19T06:56:55.873Z	org.javacs.JavaLanguageServer#sourceDirectories	Use default source directory src/main/java
 INFO	?	main	2017-01-19T06:56:55.876Z	org.javacs.JavaLanguageServer#sourceDirectories	Use default test directory src/test/java
-INFO	?	InitialIndex	2017-01-19T06:56:56.175Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Actions/Calculator/Function.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.181Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Actions/Common/Common.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.182Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Actions/Common/Constants.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.185Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Actions/google/Google.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.186Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Actions/google/PageFactory.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.186Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Actions/sss/hq/StoreOrder.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.187Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/Android/AndroidScreenEntity.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.189Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/Android/SevenElevenShiftIn.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.190Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/Calculator/CalculatorEntity.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.192Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/google/GoogleHomeEntity.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.193Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/sss/hq/HQFrontEndMainPage.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.198Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/sss/hq/HQLoginPage.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.199Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Interfaces/sss/portal/CDCPortalMainPage.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.201Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Tests/google/testing/uitesting.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.202Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Tests/SevenEleven/ProductRegisterTest.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.203Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Tests/SevenEleven/SmokeTest.java
-INFO	?	InitialIndex	2017-01-19T06:56:56.205Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/Tests/SevenEleven/StoreOrderWorkFlowTest.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.175Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/actions/Calculator/Function.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.181Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/actions/Common/Common.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.182Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/actions/Common/Constants.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.185Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/actions/google/Google.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.186Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/actions/google/PageFactory.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.186Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/actions/sss/hq/StoreOrder.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.187Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/Android/AndroidScreenEntity.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.189Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/Android/SevenElevenShiftIn.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.190Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/Calculator/CalculatorEntity.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.192Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/google/GoogleHomeEntity.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.193Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/sss/hq/HQFrontEndMainPage.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.198Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/sss/hq/HQLoginPage.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.199Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/interfaces/sss/portal/CDCPortalMainPage.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.201Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/tests/google/testing/uitesting.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.202Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/tests/SevenEleven/ProductRegisterTest.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.203Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/tests/SevenEleven/SmokeTest.java
+INFO	?	InitialIndex	2017-01-19T06:56:56.205Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/test/java/tests/SevenEleven/StoreOrderWorkFlowTest.java
 INFO	?	InitialIndex	2017-01-19T06:56:56.207Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/main/java/com/sss/iframework/driver/appium/android/IFrameworkAndroidBrowserLocalDriver.java
 INFO	?	InitialIndex	2017-01-19T06:56:56.208Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/main/java/com/sss/iframework/driver/appium/android/IFrameworkAndroidChromeLocalDriver.java
 INFO	?	InitialIndex	2017-01-19T06:56:56.210Z	org.javacs.SymbolIndex$1#parseAll	Index /Users/vin/Projects/711-Automation/src/main/java/com/sss/iframework/driver/appium/android/IFrameworkAndroidNativeLocalDriver.java

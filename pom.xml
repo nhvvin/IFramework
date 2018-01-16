@@ -157,9 +157,9 @@
                                 </property>
                                 <workingDirectory>target/</workingDirectory>
                             </properties>
-                             <!-- <suiteXmlFiles>
-                                <suiteXmlFile>src/test/java/Test Suites/HQProductMaster/HQProductRegister.xml</suiteXmlFile>
-                            </suiteXmlFiles>  -->
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/java/testsuites/demo/demo_run_single_test_zinio.xml</suiteXmlFile>
+                            </suiteXmlFiles>
                             <reportsDirectory>${project.basedir}/out</reportsDirectory>
                             <skipTests>false</skipTests> 
                         </configuration> 

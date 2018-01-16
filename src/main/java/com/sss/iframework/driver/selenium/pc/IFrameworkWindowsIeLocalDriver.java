@@ -9,7 +9,7 @@ import java.io.File;
 public class IFrameworkWindowsIeLocalDriver extends IFrameworkLocalDriver {
   // TODO: hard code driver executable
   private String _ieDriverExecutable =
-      "E:\\Workspace\\Eclipse workspace\\Selenium-TestNG\\Resources\\IEDriverServer.exe";
+      "E:\\Workspace\\Eclipse workspace\\Selenium-TestNG\\resources\\IEDriverServer.exe";
 
   public void setDriverExe(String driverExe) {
     this._ieDriverExecutable = driverExe;

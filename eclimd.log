@@ -11,7 +11,7 @@
 2016-12-24 18:47:45,979 INFO  [org.eclim.eclipse.EclimDaemon] Jobs finished.
 2016-12-24 18:47:45,979 INFO  [org.eclim.eclipse.EclimDaemon] Eclim Server Started on: 127.0.0.1:9091
 2016-12-24 18:49:19,755 ERROR [org.eclim.command.Main] Command failed
-java.net.URISyntaxException: Illegal character in fragment at index 139: file:///Users/vin/.emacs.d/.cache/auto-save/site/#!Users!vin!Project!711-Automation!src!test!java!Interfaces!sss!hq!HQFrontEndMainPage.java#
+java.net.URISyntaxException: Illegal character in fragment at index 139: file:///Users/vin/.emacs.d/.cache/auto-save/site/#!Users!vin!Project!711-Automation!src!test!java!interfaces!sss!hq!HQFrontEndMainPage.java#
 	at java.net.URI$Parser.fail(URI.java:2848)
 	at java.net.URI$Parser.checkChars(URI.java:3021)
 	at java.net.URI$Parser.parse(URI.java:3067)

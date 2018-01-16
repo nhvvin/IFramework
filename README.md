@@ -90,12 +90,12 @@ Package IFramework is core of automation framework. It will provide features:
 	<test name="Selenium - TestNG - Chrome on PC">
 		<parameter name="device" value="pc">
 			<provider name="selenium" apptype="Chrome">
-                 <driverexe>src/test/java/Resources/chromedriver</driverexe>
+                 <driverexe>src/test/java/resources/chromedriver</driverexe>
 			</provider>
 		</parameter>
 
 		<classes>
-			<class name="Tests.google.testing.uitesting">
+			<class name="tests.google.testing.UITesting">
 			</class>
 		</classes>
 	</test>
@@ -130,12 +130,12 @@ There are several listener class which have their own mission. `IFrameworkMethod
 	<test name="Selenium - TestNG - Chrome on PC">
 		<parameter name="device" value="pc">
 			<provider name="selenium" apptype="Edge">
-                 <driverexe>src/test/java/Resources/MicrosoftWebDriver.exe</driverexe>
+                 <driverexe>src/test/java/resources/MicrosoftWebDriver.exe</driverexe>
 			</provider>
 		</parameter>
 
 		<classes>
-			<class name="Tests.google.testing.uitesting">
+			<class name="tests.google.testing.UITesting">
 				<methods>
 					<exclude name="TC003_Remove_User"></exclude>
 					<include name="TC001_Navigate_Google_Home"></include>
@@ -182,7 +182,7 @@ IFramework use same method for web browser and android native app. So you can ru
 			</provider>
 		</parameter>
 		<classes>
-			<class name="Tests.SevenEleven.SmokeTest"></class>
+			<class name="tests.SevenEleven.SmokeTest"></class>
 		</classes>
 	</test>
 
