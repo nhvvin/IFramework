@@ -21,10 +21,10 @@
 
         <classes>
             <class name="tests.zinio.LoginZinioTest">
-                <!--<methods>-->
-                    <!--<include name="TC001_Navigate_Google_Home"/>-->
+                <methods>
+                    <include name="TC005_Verify_that_user_can_read_an_issue_of_magazines_successfully"/>
                     <!--<exclude name="TC002_Checkk_button_Search"/>-->
-                <!--</methods>-->
+                </methods>
             </class>
         </classes>
     </test>
