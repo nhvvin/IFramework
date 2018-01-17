@@ -22,7 +22,7 @@
         <classes>
             <class name="tests.zinio.LoginZinioTest">
                 <methods>
-                    <include name="TC005_Verify_that_user_can_read_an_issue_of_magazines_successfully"/>
+                    <include name="T006_Verify_that_user_can_navigate_to_next_or_previous_page_to_read_issue_content"/>
                     <!--<exclude name="TC002_Checkk_button_Search"/>-->
                 </methods>
             </class>

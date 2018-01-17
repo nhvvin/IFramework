@@ -3,6 +3,7 @@ package tests.zinio;
 import com.sss.selenium.IFrameworkAssert;
 import com.sss.selenium.IFrameworkAutomation;
 import com.sss.selenium.IFrameworkElementDefinition;
+import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,8 +11,8 @@ import org.openqa.selenium.WebElement;
 public class ZinioReaderPage {
 
   //Zinio Reader
-  public static By coverPage = IFrameworkElementDefinition.CssSelector(
-      "image[xlink:href='http://imgs.zinio.com/repository/500806567/416276104/SVG/img_1_1.jpg']");
+  public static By coverPage = IFrameworkElementDefinition.Xpath(
+      "//image[xlink:href='http://imgs.zinio.com/repository/500806567/416276104/SVG/img_1_1.jpg']");
   public static By btnNext = IFrameworkElementDefinition.CssSelector("span#next-page");
   public static By btnBookmark = IFrameworkElementDefinition.CssSelector("li#bookmarks-toggle");
   public static By btnSkipPage = IFrameworkElementDefinition.CssSelector("li#thumbs-toggle");
@@ -27,8 +28,9 @@ public class ZinioReaderPage {
 
   public static void CheckReadTab() {
     WebDriver driver = IFrameworkAutomation.getDriver();
-    driver.switchTo().window("Zinio Reader");
-    WebElement cover = driver.findElement(coverPage);
+    ArrayList<String> browserTabs = new ArrayList<>(driver.getWindowHandles());
+    driver.switchTo().window(browserTabs.get(1));
+    WebElement cover = driver.findElement(By.cssSelector("image"));
     IFrameworkAssert.verifyTrue(cover.isDisplayed(), true);
   }
 

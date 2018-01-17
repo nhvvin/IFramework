@@ -70,15 +70,18 @@ public class LoginZinioTest {
     By result = IFrameworkElementDefinition.Xpath("//p[contains(text(), 'Bali Guide')]");
     IFrameworkAutomation.click(result);
     IFrameworkAutomation.click(IFrameworkElementDefinition.CssSelector("img[alt='Bali Guide']"));
+    IFrameworkAutomation.switchWindow("Zinio Reader");
     IFrameworkAutomation.click(ZinioReaderPage.btnNext);
+    IFrameworkAutomation.waitForControl(ZinioReaderPage.sldView, 5000);
 
     //Get id of slider view
     String idNext = IFrameworkAutomation.getAttribute(ZinioReaderPage.sldView, "id");
     IFrameworkAssert.verifyEquals(idNext, "svgc2");
 
     IFrameworkAutomation.click(ZinioReaderPage.btnPrevious);
+    IFrameworkAutomation.waitForControl(ZinioReaderPage.sldView, 5000);
     String idPrevious = IFrameworkAutomation.getAttribute(ZinioReaderPage.sldView, "id");
-    IFrameworkAssert.verifyEquals(idPrevious, "svgc0");
+    IFrameworkAssert.verifyEquals(idPrevious, "svg0");
   }
 
   @AfterTest

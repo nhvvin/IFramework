@@ -3,6 +3,7 @@ package com.sss.selenium;
 import com.sss.iframework.IFrameworkNavigator;
 import com.sss.iframework.driver.IFrameworkDriverManager;
 import com.sss.iframework.driver.IFrameworkWebDriver;
+import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.*;
@@ -23,6 +24,22 @@ public class IFrameworkAutomation {
   //TODO: change public to private
   public static RemoteWebDriver getDriver() {
     return IFrameworkAutomation.getIFrameworkWebDriver().getWebDriver();
+  }
+
+  public static void switchWindow(String windowName) {
+    try {
+      WebDriver _driver = getDriver();
+      Set<String> windows = _driver.getWindowHandles();
+      for (String window : windows) {
+        _driver.switchTo().window(window);
+        if (_driver.getTitle().contains(windowName)) {
+          break;
+        }
+      }
+    } catch (Exception e) {
+      System.err.println("Cannot Switch window " + e.getMessage());
+      e.printStackTrace();
+    }
   }
 
   public static void open() {
@@ -47,7 +64,8 @@ public class IFrameworkAutomation {
 
     boolean isExist = false;
     try {
-      IFrameworkAutomation.getDriver().manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+      IFrameworkAutomation.getDriver().manage().timeouts()
+          .implicitlyWait(timeout, TimeUnit.SECONDS);
       IFrameworkAutomation.getDriver().findElement(element);
       isExist = true;
     } catch (Exception e) {
@@ -87,7 +105,8 @@ public class IFrameworkAutomation {
     boolean isExist = false;
     long timeout = IFrameworkSetting.getObjecWait() * 1000;
     try {
-      IFrameworkAutomation.getDriver().manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+      IFrameworkAutomation.getDriver().manage().timeouts()
+          .implicitlyWait(timeout, TimeUnit.SECONDS);
       String title = IFrameworkAutomation.getDriver().getTitle();
       long getTickCount = System.currentTimeMillis();
       while (!title.equals(pageTitle)) {
@@ -97,15 +116,17 @@ public class IFrameworkAutomation {
           break;
         }
       }
-      if (title.equals(pageTitle))
+      if (title.equals(pageTitle)) {
         isExist = true;
+      }
     } catch (Exception e) {
       isExist = false;
       System.err.println("isPageDisplayed: title=" + pageTitle + " - message: " + e.getMessage());
     }
 
     System.out.println(
-        "isPageDisplayed - pageTitle: " + pageTitle + " >> " + isExist + " .." + Thread.currentThread().getId());
+        "isPageDisplayed - pageTitle: " + pageTitle + " >> " + isExist + " .." + Thread
+            .currentThread().getId());
     return isExist;
   }
 
@@ -198,14 +219,16 @@ public class IFrameworkAutomation {
     waitForControl(element);
     WebElement tableElement = findElement(element);
     List<WebElement> rows = tableElement.findElements(By.xpath("tbody/tr"));
-    if (rowIndex > rows.size())
+    if (rowIndex > rows.size()) {
       return sResult;
+    }
     for (int i = 0; i < rows.size(); i++) {
       if (i == rowIndex) {
         WebElement row = rows.get(i);
         List<WebElement> cols = row.findElements(By.xpath("td"));
-        if (colIndex > cols.size())
+        if (colIndex > cols.size()) {
           return sResult;
+        }
         for (int j = 0; j < cols.size(); j++) {
           if (j == colIndex) {
             WebElement col = cols.get(j);
@@ -283,7 +306,8 @@ public class IFrameworkAutomation {
     }
 
     click(By.className("datepicker-switch"));
-    calYear = IFrameworkAutomation.getDriver().findElement(By.xpath("//div[2]/div[2]/table/thead/tr/th[2]")).getText();
+    calYear = IFrameworkAutomation.getDriver()
+        .findElement(By.xpath("//div[2]/div[2]/table/thead/tr/th[2]")).getText();
     expYear = Integer.parseInt(calYear);
     try {
       int numSelectYear = Integer.parseInt(year) - Integer.parseInt(calYear);
@@ -301,10 +325,12 @@ public class IFrameworkAutomation {
       }
 
       IFrameworkAutomation.getDriver()
-          .findElement(By.xpath("//div[2]/div[2]/table/tbody/tr/td/span[" + (Integer.parseInt(month) + 2) + "]"))
+          .findElement(By.xpath(
+              "//div[2]/div[2]/table/tbody/tr/td/span[" + (Integer.parseInt(month) + 2) + "]"))
           .click();
       IFrameworkAutomation.getDriver()
-          .findElement(By.xpath("//table/tbody/tr/td[text()='" + day + "' and @class='day']")).click();
+          .findElement(By.xpath("//table/tbody/tr/td[text()='" + day + "' and @class='day']"))
+          .click();
     } catch (Exception e) {
       System.out.println("msg : " + e.toString());
     }
