@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.testng.annotations.AfterTest;
 
 public class IFrameworkAutomation {
 
@@ -73,6 +74,20 @@ public class IFrameworkAutomation {
       isExist = false;
     }
     return isExist;
+  }
+
+  public static boolean waitForControlDisplay(By element, long timeout) {
+
+    boolean isDisplay = false;
+    try {
+      IFrameworkAutomation.getDriver().manage().timeouts()
+          .implicitlyWait(timeout, TimeUnit.SECONDS);
+      isDisplay = IFrameworkAutomation.isElementDisplayed(element);
+    } catch (Exception e) {
+      log.debug("waitForControlDisplay:" + e.getMessage());
+      isDisplay = false;
+    }
+    return isDisplay;
   }
 
   public static boolean waitForControl(By element) {

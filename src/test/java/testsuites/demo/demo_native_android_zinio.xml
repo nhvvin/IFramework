@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="IFramework-Zinio" parallel="tests" thread-count="5">
+<suite name="IFramework">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="com.sss.testng.IFrameworkSendReport"/>
     <listener class-name="com.sss.testng.IFrameworkMethodListener"/>
     <listener class-name="com.sss.testng.IFrameworkTestListener"/>
     <listener class-name="com.sss.testng.IFrameworkTestSuiteListener"/>
   </listeners>
 
-  <parameter name="log4j" value="true"/>
-
-  <test name="Selenium - TestNG - Chrome on PC">
-    <parameter name="device" value="mac">
-      <provider name="selenium" apptype="Chrome">
-        <driverexe>src/test/java/resources/chromedriver</driverexe>
+  <test name="Selenium - TestNG">
+    <parameter name="device" value="android">
+      <provider name="appium" apptype="Native">
+        <apppackage>com.zinio.mobile.android.reader</apppackage>
+        <appactivity>com.zinio.mobile.android.reader.ui.activity.ShopMainActivity</appactivity>
+        <devicename>Mi phone</devicename>
       </provider>
     </parameter>
-
     <classes>
-      <class name="tests.zinio.ZinioWebTest">
+      <class name="tests.zinio.ZinioAndroidTest">
       </class>
     </classes>
   </test>
-</suite>
+
+</suite> 

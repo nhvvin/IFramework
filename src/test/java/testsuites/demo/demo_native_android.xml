@@ -14,7 +14,7 @@
 			<provider name="appium" apptype="Native">
 				<apppackage>com.mobile.seveneleven</apppackage>
 				<appactivity>com.mobile.seveneleven.ui.shiftin.ShiftInActivity</appactivity>
-                <devicename>SSS MiPad</devicename>
+				<devicename>SSS MiPad</devicename>
 				<version>4.4.4</version>
 			</provider>
 		</parameter>

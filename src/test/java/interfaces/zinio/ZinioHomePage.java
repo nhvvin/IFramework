@@ -42,6 +42,8 @@ public class ZinioHomePage {
       .CssSelector(".magazine-menu [translate='Read']");
   public static By searchContent = IFrameworkElementDefinition
       .CssSelector(".searchContainer .block a");
+  public static By ddbSignOut = IFrameworkElementDefinition
+      .CssSelector(".magazine-menu #user-signout");
 
 
   public static void signIn(String user, String pass) {
@@ -60,6 +62,11 @@ public class ZinioHomePage {
     IFrameworkAutomation.enter(inputPassSignUp, pass);
     IFrameworkAutomation.enter(inputVerifyPassSignUp, pass);
     IFrameworkAutomation.click(btnCreateNewAcc);
+  }
+
+  public static void signOut() {
+    IFrameworkAutomation.click(ddbMyMagazines);
+    IFrameworkAutomation.click(ddbSignOut);
   }
 
   public static void searchMagazines(String nameMagazine) {

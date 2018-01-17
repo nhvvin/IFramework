@@ -44,8 +44,8 @@ public class IFrameworkAndroidChromeLocalDriver extends IFrameworkLocalDriver {
 
     capabilities.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
     capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID);
-    capabilities.setCapability("deviceName", "SSS Mi");
-    capabilities.setCapability("noReset", "true");
+//    capabilities.setCapability("deviceName", "SSS Mi");
+//    capabilities.setCapability("noReset", "true");
     //		this._webDriver = new AndroidDriver(new URL(_remoteAddress),
     //				capabilities);
     this._webDriver = new AndroidDriver(new URL(appiumServiceUrl), capabilities);
