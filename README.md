@@ -68,30 +68,29 @@ Package IFramework is core of automation framework. It will provide features:
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="IFramework" parallel="tests" thread-count="5">
-	<listeners>
-		<listener class-name="com.sss.testng.IFrameworkMethodListener" />
-		<listener class-name="com.sss.testng.IFrameworkTestListener" />
-		<listener class-name="com.sss.testng.IFrameworkTestSuiteListener" />
-		<listener class-name="com.sss.testng.IFrameworkSendReport"/>
-		<listener class-name="org.uncommons.reportng.HTMLReporter" />
-	</listeners>
+<suite name="IFramework-Zinio" parallel="tests" thread-count="5">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="com.sss.testng.IFrameworkSendReport"/>
+    <listener class-name="com.sss.testng.IFrameworkMethodListener"/>
+    <listener class-name="com.sss.testng.IFrameworkTestListener"/>
+    <listener class-name="com.sss.testng.IFrameworkTestSuiteListener"/>
+  </listeners>
 
-	<parameter name="log4j" value="true" />
+  <parameter name="log4j" value="true"/>
 
-	<test name="Selenium - TestNG - Chrome on PC">
-		<parameter name="device" value="pc">
-			<provider name="selenium" apptype="Chrome">
-                 <driverexe>src/test/java/resources/chromedriver</driverexe>
-			</provider>
-		</parameter>
+  <test name="Selenium - TestNG - Chrome on PC">
+    <parameter name="device" value="mac">
+      <provider name="selenium" apptype="Chrome">
+        <driverexe>src/test/java/resources/chromedriver</driverexe>
+      </provider>
+    </parameter>
 
-		<classes>
-			<class name="tests.google.testing.UITesting">
-			</class>
-		</classes>
-	</test>
-
+    <classes>
+      <class name="tests.zinio.ZinioWebTest">
+      </class>
+    </classes>
+  </test>
 </suite>
 
 ```
@@ -110,34 +109,40 @@ There are several listener class which have their own mission. `IFrameworkMethod
 
 <suite name="IFramework" parallel="tests" thread-count="5">
 	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.sss.testng.IFrameworkSendReport"/>
 		<listener class-name="com.sss.testng.IFrameworkMethodListener" />
 		<listener class-name="com.sss.testng.IFrameworkTestListener" />
 		<listener class-name="com.sss.testng.IFrameworkTestSuiteListener" />
-		<listener class-name="com.sss.testng.IFrameworkSendReport"/>
-		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 	</listeners>
 
 	<parameter name="log4j" value="true" />
 
 	<test name="Selenium - TestNG - Chrome on PC">
-		<parameter name="device" value="pc">
-			<provider name="selenium" apptype="Edge">
-                 <driverexe>src/test/java/resources/MicrosoftWebDriver.exe</driverexe>
+		<parameter name="device" value="mac">
+			<provider name="selenium" apptype="Chrome">
+                 <driverexe>src/test/java/resources/chromedriver</driverexe>
 			</provider>
 		</parameter>
 
 		<classes>
-			<class name="tests.google.testing.UITesting">
-				<methods>
-					<exclude name="TC003_Remove_User"></exclude>
-					<include name="TC001_Navigate_Google_Home"></include>
-					<include name="TC002_Remember_Me_checkbox"></include>
-				</methods>
+			<class name="tests.zinio.ZinioWebTest">
 			</class>
 		</classes>
 	</test>
 
-</suite>
+	<test name="Selenium - TestNG - Firefox on PC">
+		<parameter name="device" value="mac">
+			<provider name="selenium" apptype="Firefox">
+				<driverexe>src/test/java/resources/geckodriver</driverexe>
+			</provider>
+		</parameter>
+
+		<classes>
+			<class name="tests.zinio.ZinioWebTest">
+			</class>
+		</classes>
+	</test>
 ```
 
 You can add multiple test suite in same TestNG xml for parallel running test. Just add `<suite name="IFramework" parallel="tests" thread-count="5">` to open this feature of TestNG. 
@@ -157,26 +162,26 @@ IFramework use same method for web browser and android native app. So you can ru
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="IFramework">
-	<listeners>
-		<listener class-name="org.uncommons.reportng.HTMLReporter" />
-		<listener class-name="com.sss.testng.IFrameworkMethodListener" />
-		<listener class-name="com.sss.testng.IFrameworkTestListener" />
-		<listener class-name="com.sss.testng.IFrameworkTestSuiteListener"/>
-	</listeners>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="com.sss.testng.IFrameworkMethodListener"/>
+    <listener class-name="com.sss.testng.IFrameworkTestListener"/>
+    <listener class-name="com.sss.testng.IFrameworkTestSuiteListener"/>
+  </listeners>
 
-	<test name="Selenium - TestNG">
-		<parameter name="device" value="android">
-			<provider name="appium" apptype="Native">
-				<apppackage>com.mobile.seveneleven</apppackage>
-				<appactivity>com.mobile.seveneleven.ui.shiftin.ShiftInActivity</appactivity>
-                <devicename>SSS MiPad</devicename>
-				<version>4.4.4</version>
-			</provider>
-		</parameter>
-		<classes>
-			<class name="tests.SevenEleven.SmokeTest"></class>
-		</classes>
-	</test>
+  <test name="Selenium - TestNG">
+    <parameter name="device" value="android">
+      <provider name="appium" apptype="Native">
+        <apppackage>com.zinio.mobile.android.reader</apppackage>
+        <appactivity>com.zinio.mobile.android.reader.ui.activity.ShopMainActivity</appactivity>
+        <devicename>Mi phone</devicename>
+      </provider>
+    </parameter>
+    <classes>
+      <class name="tests.zinio.ZinioAndroidTest">
+      </class>
+    </classes>
+  </test>
 
-</suite> 
+</suite>  
 ```

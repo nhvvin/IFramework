@@ -20,7 +20,7 @@
 		</parameter>
 
 		<classes>
-			<class name="tests.google.testing.UITesting">
+			<class name="tests.zinio.ZinioWebTest">
 			</class>
 		</classes>
 	</test>
@@ -33,7 +33,7 @@
 		</parameter>
 
 		<classes>
-			<class name="tests.google.testing.UITesting">
+			<class name="tests.zinio.ZinioWebTest">
 			</class>
 		</classes>
 	</test>
