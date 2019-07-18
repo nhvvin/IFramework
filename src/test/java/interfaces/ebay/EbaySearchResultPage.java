@@ -25,6 +25,6 @@ public class EbaySearchResultPage {
             topElementsPrice.add(temp);
         }
         Reporter.log(String.valueOf(topElementsPrice));
-        IFrameworkAssert.verifyTrue(expectedPrice.containsAll(topElementsPrice));
+        IFrameworkAssert.verifyTrue(expectedPrice.containsAll(topElementsPrice), true);
     }
 }
