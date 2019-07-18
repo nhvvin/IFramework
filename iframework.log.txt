@@ -1,1 +1,0 @@
-2017-01-12 17:28:12,895 INFO  [com.sss.testng.IFrameworkTestListener] - Test[Selenium - TestNG - Chrome on PC] - thread[11] 
