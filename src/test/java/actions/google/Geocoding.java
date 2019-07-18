@@ -4,6 +4,7 @@ import com.sss.selenium.IFrameworkAssert;
 import com.sss.utility.IFrameworkRESTFullAPI;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.testng.Reporter;
 
 public class Geocoding {
     private static JSONObject getLocation(String address) throws Exception {
@@ -19,6 +20,7 @@ public class Geocoding {
 
     public static void verifyLocation(String address, JSONObject expected) throws Exception {
         JSONObject actualLocation = getLocation(address);
+        Reporter.log("Address: " + address + "\nActual: " + actualLocation + "\nExpected: " + expected);
         IFrameworkAssert.verifyEquals(actualLocation, expected);
     }
 }
