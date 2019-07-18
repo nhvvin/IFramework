@@ -38,7 +38,13 @@ public class IFrameworkRESTFullAPI {
         System.out.println("\nSending 'GET' request to URL : " + url);
         System.out.println("Response Code : " + responseCode);
 
-        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        BufferedReader in;
+        if (responseCode >= 200 && responseCode < 400) {
+            in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        } else {
+            in = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+        }
+
         String inputLine;
         StringBuilder response = new StringBuilder();
 
@@ -48,8 +54,7 @@ public class IFrameworkRESTFullAPI {
         in.close();
 
         JSONParser jsonParser = new JSONParser();
-        JSONObject jsonO = (JSONObject) jsonParser.parse(response.toString());
-        return jsonO;
+        return (JSONObject) jsonParser.parse(response.toString());
     }
 
     public void sendPost(String url) throws Exception {
