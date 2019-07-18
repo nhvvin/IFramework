@@ -38,7 +38,7 @@ Package IFramework is core of automation framework. It will provide features:
 	-	Firefox
 	-	Safari
 	-	Edge
-- Appium: 
+- Appium:
 	- Android
 	- IOS
 
@@ -50,9 +50,9 @@ Package IFramework is core of automation framework. It will provide features:
 
 #### Main Package
 ![Alt text](https://i.imgur.com/TSG7h1n.png)
-> - Handle all of driver type for framework  
-> - Catch exceptions for framework 
-> - Helper to read xml  
+> - Handle all of driver type for framework
+> - Catch exceptions for framework
+> - Helper to read xml
 > - Mange driver
 
 #### Test Package
@@ -87,7 +87,7 @@ Package IFramework is core of automation framework. It will provide features:
     </parameter>
 
     <classes>
-      <class name="tests.zinio.ZinioWebTest">
+      <class name="ZinioWebTest">
       </class>
     </classes>
   </test>
@@ -126,7 +126,7 @@ There are several listener class which have their own mission. `IFrameworkMethod
 		</parameter>
 
 		<classes>
-			<class name="tests.zinio.ZinioWebTest">
+			<class name="ZinioWebTest">
 			</class>
 		</classes>
 	</test>
@@ -139,13 +139,13 @@ There are several listener class which have their own mission. `IFrameworkMethod
 		</parameter>
 
 		<classes>
-			<class name="tests.zinio.ZinioWebTest">
+			<class name="ZinioWebTest">
 			</class>
 		</classes>
 	</test>
 ```
 
-You can add multiple test suite in same TestNG xml for parallel running test. Just add `<suite name="IFramework" parallel="tests" thread-count="5">` to open this feature of TestNG. 
+You can add multiple test suite in same TestNG xml for parallel running test. Just add `<suite name="IFramework" parallel="tests" thread-count="5">` to open this feature of TestNG.
 
 ### Run Android Native app
 
@@ -178,10 +178,10 @@ IFramework use same method for web browser and android native app. So you can ru
       </provider>
     </parameter>
     <classes>
-      <class name="tests.zinio.ZinioAndroidTest">
+      <class name="ZinioAndroidTest">
       </class>
     </classes>
   </test>
 
-</suite>  
+</suite>
 ```

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
 
-<suite name="IFramework-Zinio">
+<suite name="IFramework-Ebay">
     <listeners>
         <listener class-name="com.sss.testng.IFrameworkTestSuiteListener"/>
         <listener class-name="com.sss.testng.IFrameworkTestListener"/>
         <listener class-name="com.sss.testng.IFrameworkMethodListener"/>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-        <listener class-name="com.sss.testng.IFrameworkSendReport"/>
     </listeners>
 
     <parameter name="log4j" value="true"/>
+    <parameter name="product-name" value="ipad"/>
+    <parameter name="top" value="5"/>
 
     <test name="Selenium - TestNG - Chrome on PC">
         <parameter name="device" value="mac">
@@ -20,11 +21,7 @@
         </parameter>
 
         <classes>
-            <class name="tests.zinio.ZinioWebTest">
-                <methods>
-                    <include name="TC002_Verify_that_user_can_login_successfully"></include>
-                </methods>
-            </class>
+            <class name="tests.ebay.EbayWebTest"></class>
         </classes>
     </test>
 </suite>

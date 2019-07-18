@@ -1,5 +1,8 @@
 package com.sss.utility;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -21,7 +24,7 @@ public class IFrameworkRESTFullAPI {
 
     private static IFrameworkRESTFullAPI instance = null;
 
-    public void sendGet(String url) throws Exception {
+    public JSONObject sendGet(String url) throws Exception {
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
@@ -44,8 +47,9 @@ public class IFrameworkRESTFullAPI {
         }
         in.close();
 
-        //print result
-        System.out.println(response.toString());
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonO = (JSONObject) jsonParser.parse(response.toString());
+        return jsonO;
     }
 
     public void sendPost(String url) throws Exception {
