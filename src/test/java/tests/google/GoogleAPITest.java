@@ -35,16 +35,16 @@ public class GoogleAPITest {
             List<String[]> allData = csvReader.readAll();
             Object[][] obj = new Object[allData.size()][1];
             for (String[] row : allData) {
-                Hashtable<Object, Object> data = new Hashtable<>();
+                Hashtable<String, JSONObject> data = new Hashtable<>();
                 JSONObject temp = new JSONObject();
-                temp.put("lat", Double.parseDouble(row[1]));
-                temp.put("lng", Double.parseDouble(row[2]));
-                data.put(row[0], new JSONObject(temp));
+                if (!row[1].isEmpty() && !row[2].isEmpty()) {
+                    temp.put("lat", Double.parseDouble(row[1]));
+                    temp.put("lng", Double.parseDouble(row[2]));
+                }
+                data.put(row[0], temp);
                 obj[allData.indexOf(row)][0] = data;
             }
             return obj;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
